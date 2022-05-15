@@ -23,7 +23,7 @@ input CreateBlogPostInput{
     CreatedOn:String!
 }
 
-type mutation {
+type Mutation {
     CreateBlogPost(input:CreateBlogPostInput):BlogPost!
 }
 
