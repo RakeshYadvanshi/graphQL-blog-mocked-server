@@ -18,14 +18,23 @@ type BlogPost {
 input CreateBlogPostInput{
     Id: ID!
     Title: String!
+    Slug:String!
     ShortDescription: String!
-    Description: String!,
-    CreatedOn:String!
+    Description: String!
+}
+
+input UpdateBlogPostInput{
+    Id: ID!
+    Title: String!
+    ShortDescription: String!
+    Description: String!
 }
 
 type Mutation {
     CreateBlogPost(input:CreateBlogPostInput):BlogPost!
+    UpdateBlogPost(input:UpdateBlogPostInput):BlogPost!
 }
+
 
 `;
 
